@@ -40,7 +40,7 @@
 </head>
 <body>
     <!-- 頁頭區 -->
-    <header fixed="top">
+    <header class="fixed-top">
         <div class="container">
             <div class="d-flex flex-column align-items-center">
                 <h1 class="display-4">胡承守的個人部落格</h1>
@@ -66,7 +66,7 @@
             </div>
             <div class="row align-items-center">
                 <div class="col-md-4 text-center">
-                    <img src="uu/photo/形象照.jpg" alt="胡承守" class="img-fluid rounded" width="200">
+                    <img src="images/形象照.jpg" alt="胡承守" class="img-fluid rounded" width="200">
                 </div>
                 <div class="col-md-8">
                     <h3>胡承守</h3>
@@ -128,7 +128,7 @@
             <div class="row">
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="uu/photo/skyyyy.jpg" class="card-img-top img-fluid" alt="山間風景">
+                        <img src="images/skyyyy.jpg" class="card-img-top img-fluid" alt="山間風景">
                         <div class="card-body">
                             <p class="card-text">好看天空</p>
                         </div>
@@ -136,7 +136,7 @@
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="uu/photo/trash.jpg" class="card-img-top img-fluid" alt="小鎮景色">
+                        <img src="images/trash.jpg" class="card-img-top img-fluid" alt="小鎮景色">
                         <div class="card-body">
                             <p class="card-text">音樂祭</p>
                         </div>
@@ -147,12 +147,20 @@
 
         <!-- 互動元素 -->
         <section class="mb-5">
-            <details class="accordion">
-                <summary class="accordion-header">點進來看</summary>
-                <div class="accordion-body">
-                    <p>這是我學校的介紹！</p>
+            <div class="accordion" id="myAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            點進來看
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#myAccordion">
+                        <div class="accordion-body">
+                            <p>這是我學校的介紹！</p>
+                        </div>
+                    </div>
                 </div>
-            </details>
+            </div>
         </section>
 
         <!-- 加入地圖 -->
@@ -177,4 +185,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
